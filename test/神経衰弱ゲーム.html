@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>神経衰弱ゲーム</title>
+        <link rel="stylesheet" href="神経衰弱ゲーム.css">
+        <link rel="stylesheet" href="カード.css">
+        <!--スクリプト記述-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="神経衰弱.js"></script>
+    </head>
+    <body>
+        <div class="clear">
+            <p id="c" class="h">C</p>
+            <p id="l" class="h">L</p>
+            <p id="e" class="h">E</p>
+            <p id="a" class="h">A</p>
+            <p id="r" class="h">R</p>
+        </div>
+        <div class="contennts">
+            <!--左側設定パネルエリア-->
+            <div class="div-panel-area">
+
+                <!--設定エリア-->
+                <fieldset class="field-settei">
+                    <legend>設定</legend>
+                    <table>
+                        <thead></thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <label for="maxCardCnt">カード最大枚数</label>
+                            </td>
+                            <td>
+                                <input type="tel" id="maxCardCnt" class="settei-text" maxlength="2">
+                            </td>
+                            <!-- <td rowspan="2">
+                                <button class="js-set">設定</button>
+                            </td> -->
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="tryCardCnt">トライ最大回数</label>
+                            </td>
+                            <td>
+                                <input type="tel" id="tryCardCnt" class="settei-text" maxlength="2">
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+                <br>
+
+                <!--操作エリア-->
+                <fieldset class="field-sousa">
+                    <legend>操作</legend>
+                    <button class="js-start">スタート</button>
+                    <button class="js-reset">リセット</button>
+                </fieldset>
+                <br>
+
+                <!--残り回数-->
+                <p class="p-countTxt">残り<span class="ja-countTxt"></span>回</p>
+                <br>
+
+                <!--メッセージエリア-->
+                <fieldset class="field-message">
+                    <legend>メッセージエリア</legend>
+                    <textarea class="message-text" readonly="readonly"></textarea>
+                </fieldset>    
+            </div>
+
+            <!--右側トランプエリア-->
+            <div class="div-game-area">
+                <ul class="stage js-stage"></ul>
+            </div>
+        </div>
+    </body>
+</html>

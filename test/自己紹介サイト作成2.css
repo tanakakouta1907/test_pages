@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-shadow: 1px 1px 1px rgb(212, 212, 212);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/**/
+body{
+    height: 100vh;
+    width: 100%;
+}
+body::after{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    position: fixed;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+}
+
+@keyframes gradient{
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0$;
+    }
+}
+/*ヘッダー*/
+.title{
+    margin: auto;
+}
+header{
+    width: 100%;
+    padding: 20px 5px 40px 5px;
+    display: flex;
+    position: fixed;
+    z-index: 10;
+}
+ul{
+    margin-left: auto;
+    margin-right: 20px;
+    position: relative;
+    bottom: -30px;
+}
+a{
+    text-decoration: none;
+}
+li{
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
+}
+a::after{
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.4s;
+}
+a:hover::after{
+    width: 120%;
+}
+
+/*メイン*/
+main{
+    max-width: 1020px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.title{
+    margin-left: 20px;
+    margin-right: auto;
+    font-size: larger;
+}
+strong{
+    font-size: 2rem;
+}
+.big{
+    display: inline-block;
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 25vh;
+    text-align: center;
+    position: relative;
+    top: 40vh;
+}
+.bigtitle{
+    font-size: 7vw;
+}
+
+p{
+    text-indent: 1rem;
+}
+.brock {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(30px);
+    transition: all 1s;
+    width: 40%;
+    margin-bottom: 30vh;
+  }
+  .brock.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+  }
+
+  .brock.syumi, .brock.ikigomi{
+    margin-right: 0;
+    margin-left: auto;
+  }
+.midasi::after{
+    content: "";
+    position: absolute;
+    top:-20px;
+    left: -10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.274);
+    border-radius: 50%;
+    z-index: -1;
+}
+.midasi::before{
+    content: "";
+    position: absolute;
+    top:-20px;
+    left: -20px;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.308);
+    border-radius: 50%;
+    z-index: -1;
+}
+.naiyou{
+    margin-top: 20px;
+}
+.naiyou::after{
+    content: "";
+    position: absolute;
+    top:-20px;
+    left: 30px;
+    width: 23rem;
+    height: 23rem;
+    background-color: rgba(255, 255, 255, 0.274);
+    border-radius: 50%;
+    z-index: -1;
+}
+  /*フッター*/
+  footer{
+    width: 100%;
+    height: 20vh;
+    margin-top: 30vh;
+  }
